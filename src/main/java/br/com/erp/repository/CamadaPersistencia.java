@@ -34,6 +34,8 @@ public class CamadaPersistencia {
 		empresa.setDataFundacao(new Date());
 		empresa.setRamoAtividade(listaAtividades.get(8));
 		
+		
+		
 		empresas.guardar(empresa);
 		
 		em.getTransaction().commit();

@@ -1,6 +1,7 @@
 package com.br.erp.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -49,6 +50,9 @@ public class Empresa implements Serializable {
 	@JoinColumn(name = "ramo_atividade_id")
 	private RamoAtividade ramoAtividade;
 
+	@Column(precision = 10, scale = 2)
+	private BigDecimal faturamento;
+	
 	public Long getId() {
 		return id;
 	}
@@ -104,6 +108,14 @@ public class Empresa implements Serializable {
 	public void setRamoAtividade(RamoAtividade ramoAtividade) {
 		this.ramoAtividade = ramoAtividade;
 	}
+	
+	public BigDecimal getFaturamento() {
+		return faturamento;
+	}
+
+	public void setFaturamento(BigDecimal faturamento) {
+		this.faturamento = faturamento;
+	}
 
 	@Override
 	public int hashCode() {
@@ -112,7 +124,7 @@ public class Empresa implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
