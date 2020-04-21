@@ -39,7 +39,7 @@ public class Empresa implements Serializable {
 	@Column(nullable = false, length = 30)
 	private TipoEmpresa tipo;
 
-	@Column(nullable = false, length = 20)
+	@Column(nullable = false, length = 18)
 	private String cnpj;
 
 	@Temporal(TemporalType.DATE)
